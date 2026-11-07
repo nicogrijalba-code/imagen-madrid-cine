@@ -212,33 +212,56 @@
       </span>
     );
 
-    /* --- Tarjeta de obra: cartel generado con degradado + perforaciones de cinta --- */
+        /* --- Tarjeta individual de obra --- */
     function Card({ obra, onOpen }) {
-      const h = tonoDe(obra.id);
       return (
-        <button onClick={() => onOpen(obra)} className="fade-in group text-left overflow-hidden rounded-2xl border border-white/10 bg-ink-800 transition hover:-translate-y-1 hover:border-amber-screen/40 hover:shadow-2xl hover:shadow-amber-screen/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-screen">
-          <div className="relative h-36 overflow-hidden" style={{ background: `linear-gradient(135deg, hsl(${h} 55% 22%), hsl(${(h + 50) % 360} 45% 8%))` }}>
-            <div className="perfs absolute inset-x-0 top-1.5 h-1.5 opacity-60" />
-            <div className="perfs absolute inset-x-0 bottom-1.5 h-1.5 opacity-60" />
-            <span className="absolute -bottom-6 right-3 font-display text-[7rem] font-extrabold leading-none text-white/10">{String(obra.anio).slice(-2)}</span>
-            <div className="absolute left-4 top-5 flex items-center gap-2"><TipoBadge tipo={obra.tipo} /></div>
-            <span className="absolute left-4 bottom-4 text-sm font-medium text-white/80">{obra.anio}</span>
-          </div>
-          <div className="space-y-3 p-5">
-            <div>
-              <h3 className="font-display text-xl font-semibold leading-snug text-white group-hover:text-amber-screen transition-colors">{obra.titulo}</h3>
-              <p className="mt-1 text-sm text-zinc-400">{obra.director} · {obra.genero}</p>
+        <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/5 bg-ink-800/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/10 hover:bg-ink-800">
+          
+          {/* 🆕 Si la película tiene una propiedad 'imagen', se muestra aquí arriba */}
+          {obra.imagen && (
+            <div className="-mx-5 -mt-5 mb-4 overflow-hidden rounded-t-2xl border-b border-white/5">
+              <img 
+                src={obra.imagen} 
+                alt={obra.titulo} 
+                className="w-full h-44 object-cover opacity-85 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100" 
+              />
             </div>
-            <p className="border-l-2 border-butaca pl-3 font-display text-[15px] italic leading-relaxed text-zinc-300">“{obra.cita}”</p>
-            <div className="flex flex-wrap gap-1.5 pt-1">
-              {obra.localizaciones.map((l) => (
-                <span key={l.nombre} className="inline-flex items-center gap-1 rounded-md bg-white/5 px-2 py-1 text-xs text-zinc-300">
-                  <Icon name="MapPin" size={12} className="text-amber-screen" />{l.nombre.split(',')[0].split('(')[0].trim()}
-                </span>
-              ))}
+          )}
+
+          <div>
+            <div className="flex items-center justify-between text-xs text-zinc-500">
+              <span className="inline-flex items-center gap-1 font-medium uppercase tracking-wider text-zinc-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#D4AF37]" />
+                {obra.tipo}
+              </span>
+              <span className="font-mono">{obra.anio}</span>
             </div>
+            
+            <h3 className="mt-3 font-display text-xl font-bold leading-snug text-white group-hover:text-amber-screen">
+              {obra.titulo}
+            </h3>
+            
+            <p className="mt-1 text-sm text-zinc-400">
+              <span className="text-zinc-500">De</span> {obra.director} <span className="mx-1.5 text-zinc-600">·</span> <span className="text-xs text-zinc-500">{obra.genero}</span>
+            </p>
+            
+            {obra.cita && (
+              <blockquote className="mt-4 border-l-2 border-[#D4AF37]/30 pl-3 text-xs italic leading-relaxed text-zinc-400">
+                "{obra.cita}"
+              </blockquote>
+            )}
           </div>
-        </button>
+          
+          <div className="mt-5 flex items-center justify-between border-t border-white/5 pt-3">
+            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-zinc-500">
+              <Icon name="MapPin" size={12} className="text-[#D4AF37]/70" />
+              {obra.localizaciones.length} loc.
+            </span>
+            <button onClick={() => onOpen(obra)} className="inline-flex items-center gap-1 text-xs font-semibold text-[#D4AF37] hover:text-white transition">
+              Ver ficha <Icon name="ArrowRight" size={12} />
+            </button>
+          </div>
+        </div>
       );
     }
 
