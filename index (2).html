@@ -152,13 +152,16 @@
 
     /* Línea del tiempo: cómo cambia la imagen de Madrid (resumen para completar con tu marco teórico). */
     const EPOCAS = [
-      { id: 'clasico', rango: '1940 – 1959', titulo: 'Cine clásico y franquista', resumen: 'Madrid como capital institucional y escaparate del régimen, pero también como ciudad de la inmigración interior y la penuria de posguerra.', ejemplos: ['Surcos (1951)', 'Muerte de un ciclista (1955)'], imagen: 'La capital oficial frente a la capital de los barrios' },
-      { id: 'estudios', rango: '1960 – 1969', titulo: 'Superproducción y decorado', resumen: 'Los estudios en las afueras convierten el entorno madrileño en plató para grandes producciones internacionales que reconstruyen otras ciudades y épocas.', ejemplos: ['55 días en Pekín (1963)', 'La caída del Imperio romano (1964)'], imagen: 'Madrid como fábrica de mundos ajenos' },
-      { id: 'transicion', rango: '1970 – 1982', titulo: 'Transición y cine de periferia', resumen: 'Cambio político y social. La cámara se acerca a los márgenes: la delincuencia juvenil y los suburbios sustituyen la postal oficial.', ejemplos: ['Pepi, Luci, Bom (1980)', 'Deprisa, deprisa (1981)'], imagen: 'La ciudad real, sin filtro' },
-      { id: 'movida', rango: '1983 – 1989', titulo: 'La Movida', resumen: 'Madrid se presenta como capital moderna, festiva y creativa: el color, la noche y la libertad se convierten en marca de identidad.', ejemplos: ['Mujeres al borde de un ataque de nervios (1988)'], imagen: 'La capital como símbolo de modernidad' },
-      { id: 'noventa', rango: '1990 – 1999', titulo: 'Madrid fantástico y negro', resumen: 'Género y fábula: el thriller y la comedia negra exploran una ciudad inquietante, vertical y a veces desierta.', ejemplos: ['El día de la bestia (1995)', 'Tesis (1996)', 'Abre los ojos (1997)'], imagen: 'La ciudad como pesadilla' },
-      { id: 'cosmopolita', rango: '2000 – 2009', titulo: 'Madrid cosmopolita y de barrio', resumen: 'Convive la capital global con el cine de barrio y de memoria: la ciudad se piensa desde sus vecinas y sus periferias.', ejemplos: ['Volver (2006)'], imagen: 'Entre el skyline y el barrio' },
-      { id: 'streaming', rango: '2010 – hoy', titulo: 'Plataformas y streaming', resumen: 'La ficción seriada y la distribución global proyectan una imagen de Madrid hecha para audiencias internacionales, con series que también retratan el conflicto social.', ejemplos: ['La casa de papel (2017)', 'Antidisturbios (2020)'], imagen: 'Madrid-marca y Madrid-conflicto' },
+      { id: 'pioneros', rango: '1895 – 1915', titulo: 'Pioneros del cine español', resumen: 'La llegada del cinematógrafo a la vida de los españoles, primeras imágenes de la ciudad de Madrid, vistas y paisajes, costumbrismo y verbenas.', ejemplos: ['Puerta del Sol (1896)', 'El barberillo de Lavapiés (1910)'], imagen: 'Entre la Villa y la Corte' },
+      { id: 'cine silente maduro', rango: '1915 – 1930', titulo: 'Cine silente maduro', resumen: 'Consolidación de la industria, entre el costumbrismo y la vanguardia, en busca de la identidad.', ejemplos: ['La chavala (1924)', '¡Viva Madrid, que es mi pueblo! (1928)'], imagen: 'Consolidación de la industria' }
+      { id: 'cine sonoro', rango: '1930 – 1939', titulo: 'El cine de la Segunda República y la Guerra Civil', resumen: 'De la zarzuela al star system español, estudios y productoras, luces y sombras de un periodo convulso.', ejemplos: ['La verbena de la Paloma (1935)', 'Frente de Madrid (1939)'], imagen: 'El cine militante' }
+      { id: 'clasico', rango: '1940 – 1959', titulo: 'Cine de posguerra, Cine de evasión', resumen: 'Madrid como capital institucional y escaparate del régimen, pero también como ciudad de la inmigración interior y la penuria de posguerra.', ejemplos: ['Surcos (1951)', 'Muerte de un ciclista (1955)'], imagen: 'Autarquía, folclore, comedias y el costumbrismo de los barrios' },
+      { id: 'estudios', rango: '1960 – 1969', titulo: 'Superproducción y decorado', resumen: 'Los estudios en las afueras convierten el entorno madrileño en plató para grandes producciones internacionales, desarrollismo.', ejemplos: ['55 días en Pekín (1963)', 'La ciudad no es para mí (1966)'], imagen: 'Madrid a todo color' },
+      { id: 'transicion', rango: '1970 – 1981', titulo: 'Tardofranquismo y Transición', resumen: 'Cambio político y social. La cámara se acerca a los márgenes: la delincuencia juvenil y los suburbios sustituyen la postal oficial.', ejemplos: ['La semana del asesino (1972)', 'Deprisa, deprisa (1981)'], imagen: 'La ciudad real, sin filtro' },
+      { id: 'movida', rango: '1982 – 1989', titulo: 'La Movida', resumen: 'Madrid se presenta como capital moderna, festiva y creativa: el color, la noche y la libertad se convierten en marca de identidad.', ejemplos: ['Colegas (1982)', 'Mujeres al borde de un ataque de nervios (1988)'], imagen: 'La capital como símbolo de modernidad' },
+      { id: 'noventa', rango: '1990 – 1999', titulo: 'Resaca Post-92 y desencanto', resumen: 'Madrid precario: el renacer del cine social. Género y fábula: el thriller y la comedia negra exploran una ciudad inquietante y grotesca.', ejemplos: ['El día de la bestia (1995)', 'Hola, ¿estás sola? (1995)'], imagen: 'La ciudad desencantada' },
+      { id: 'cosmopolita', rango: '2000 – 2009', titulo: 'Madrid en crecimiento y transformación', resumen: 'Convive la capital global con el cine de barrio y de memoria, el thriller de asfalto.', ejemplos: ['El bola (2000)', 'Volver (2006)'], imagen: 'Entre el nuevo skyline y el nuevo barrio' },
+      { id: 'multiplataforma', rango: '2010 – hoy', titulo: 'Plataformas y streaming, Gentrificación y Neo-Noir', resumen: 'La ficción seriada y la distribución global proyectan una imagen de Madrid hecha para audiencias internacionales, con series que también retratan el conflicto social.', ejemplos: ['Los ilusos (2013)', 'La casa de papel (2017)', 'Antidisturbios (2020)', 'Valeria (2020)'], imagen: 'Madrid-marca y Madrid-conflicto' },
     ];
 
     /* =====================================================================
@@ -302,13 +305,16 @@
         <header className="relative overflow-hidden border-b border-white/5">
           <div className="beam absolute inset-0" />
           <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-16 text-center sm:pt-24">
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[.25em] text-zinc-300">
-              <Icon name="GraduationCap" size={14} /> Repositorio de tesis doctoral
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[.25em] text-zinc-200">
+              <Icon name="GraduationCap" size={14} /> Un proyecto de @NicoGrijalba
             </p>
             <h1 className="font-display text-5xl font-extrabold leading-[1.05] text-white sm:text-7xl">
-              Madrid <em className="text-amber-screen not-italic">de Cine</em>
-            </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-lg text-zinc-400">La imagen de Madrid en el cine español: fichas, mapas, cronología y datos de más de un siglo de ciudad filmada.</p>
+  Madrid <em className="text-[#D4AF37] not-italic">de Cine</em>
+</h1>
+            <p className="mx-auto mt-5 max-w-2xl text-center text-balance text-lg text-[#D4AF37] font-bold tracking-tight">
+  La imagen de Madrid en el cine español: fichas, mapas, cronología y datos de más de un siglo de ciudad filmada.
+</p>
+
 
             {/* Buscador */}
             <div className="mx-auto mt-10 max-w-2xl">
@@ -344,8 +350,8 @@
                 </select>
               </div>
               <p className="text-sm text-zinc-500" aria-live="polite">{mostrados} de {total} fichas
-                {(f.q || f.epoca !== 'Todas' || f.tipo !== 'Todos' || f.director !== 'Todos' || f.genero !== 'Todos') && (
-                  <button onClick={() => setF({ q: '', epoca: 'Todas', tipo: 'Todos', director: 'Todos', genero: 'Todos' })} className="ml-3 text-amber-screen underline-offset-4 hover:underline">Limpiar filtros</button>
+                {(f.q || f.época !== 'Todas' || f.tipo !== 'Todos' || f.director !== 'Todos' || f.genero !== 'Todos') && (
+                  <button onClick={() => setF({ q: '', época: 'Todas', tipo: 'Todos', director: 'Todos', genero: 'Todos' })} className="ml-3 text-amber-screen underline-offset-4 hover:underline">Limpiar filtros</button>
                 )}
               </p>
             </div>
