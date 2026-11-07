@@ -329,7 +329,7 @@
             <div className="mx-auto mt-6 max-w-4xl space-y-4">
               <div className="flex flex-wrap items-center justify-center gap-2">
                 <span className="mr-1 text-xs uppercase tracking-widest text-zinc-500">Época</span>
-                {['Todas', 'Inicios','10s','20s','30s','40s','50s' '60s', '70s', '80s', '90s', '2000s','2010s','2020s' 'Actual'].map((e) => (
+                {['Todas', 'Inicios','10s','20s','30s','40s','50s','60s', '70s', '80s', '90s', '2000s','2010s','2020s' 'Actual'].map((e) => (
                   <button key={e} onClick={() => setF({ ...f, epoca: e })} className={chip(f.epoca === e)}>{e}</button>
                 ))}
               </div>
