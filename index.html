@@ -367,7 +367,7 @@
                 <ul className="space-y-2">
                   {obra.localizaciones.map((l) => (
                     <li key={l.nombre} className="flex gap-3 rounded-xl border border-white/10 bg-ink-800 p-4">
-                      <span className={`mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ${ZONAS[l.zona].color}`} />
+                      <span className={`mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full ${(ZONAS[l.zona] || ZONAS.periferia).color}`} />
                       <div className="min-w-0">
                         <p className="font-medium text-white">{l.nombre}</p>
                         <p className="text-sm text-zinc-400">{l.barrio} · {ZONAS[l.zona].label}</p>
